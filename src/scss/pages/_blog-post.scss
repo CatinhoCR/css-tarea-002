@@ -1,0 +1,27 @@
+.blog-post {
+  &__header {
+    height: rem(522);
+  }
+
+  &__body {
+    max-width: $max-width-block-text;
+    margin: rem(40) auto 0;
+  }
+
+  &__content {
+    padding: rem(20) rem(10);
+  }
+
+  &__subtitle {
+    margin-top: rem(25);
+    margin-bottom: rem(15);
+  }
+
+  &__text {
+    margin-bottom: rem(10);
+
+    > * {
+      font-size: inherit;
+    }
+  }
+}

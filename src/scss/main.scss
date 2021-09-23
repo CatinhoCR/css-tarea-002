@@ -1,0 +1,69 @@
+// @import '../../node_modules/swiper/swiper.scss';
+// @import '../../node_modules/swiper/modules/pagination/pagination.scss';
+// @import '../../node_modules/swiper/modules/navigation/navigation.scss';
+// @import '../../node_modules/swiper/modules/thumbs/thumbs.scss';
+// @import '../../node_modules/swiper/components/lazy/lazy.scss';
+
+// Abstracts (Variables, Mixins, Functions)
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Base (Normalizer, Globals, Typography)
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/grid';
+@import 'base/utils';
+@import 'base/globals';
+
+// Layout
+@import 'layout/icons';
+@import 'layout/theme';
+@import 'layout/section-blocks';
+@import 'layout/admin';
+@import 'layout/sidebars';
+@import 'layout/forms';
+@import 'layout/tables';
+@import 'layout/swipers';
+
+// Components (smaller partials used inside of blocks - divided for ease of reference)
+@import 'components/buttons';
+@import 'components/dropdown';
+@import 'components/pagination';
+@import 'components/breadcrumbs';
+@import 'components/nav/nav-search';
+@import 'components/nav/hamburger';
+@import 'components/social-media-nav';
+@import 'components/cards/cards';
+@import 'components/cards/post-card';
+@import 'components/cards/product-card';
+@import 'components/cards/category-card';
+// @import 'components/cards/'
+@import 'components/sliders/thumbs-gallery';
+@import 'components/sliders/products-slider';
+//
+@import 'components/single-step';
+@import 'components/colored-wave';
+
+// Blocks (standalone parts which are direct children of a page)
+@import 'blocks/header';
+@import 'blocks/notice-banners';
+@import 'blocks/hero';
+@import 'blocks/footer';
+@import 'blocks/accordion';
+@import 'blocks/split-module';
+@import 'blocks/tabs-nav';
+@import 'blocks/back-to-top';
+@import 'blocks/gutenberg-blocks';
+@import 'blocks/products-list';
+
+// Pages (styles specific to a certain template/page)
+@import 'pages/styleguide';
+@import 'pages/shop';
+@import 'pages/single-product';
+@import 'pages/cart';
+@import 'pages/blog-post';
+
+// Helpers and Overrides (Inspired in tailwind.css)
+@import 'helpers/color-classes';
+@import 'helpers/spacing-classes';

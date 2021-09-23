@@ -1,0 +1,45 @@
+.section-block {
+  padding: rem(40) 0;
+  position: relative;
+
+  &__intro {
+    width: 100%;
+    max-width: $max-width-block-text;
+    margin-bottom: rem(30);
+  }
+
+  &__header,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+
+    &--center {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--right {
+      justify-content: right;
+      align-items: flex-end;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(10);
+  }
+
+  // &__bg {
+  //   @include absolute(0, 0, 100%, 100%);
+
+  //   &-img {
+  //     @include object-fit;
+  //   }
+  // }
+
+  // &--img {
+  //   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), transparent;
+  // }
+}

@@ -1,0 +1,40 @@
+.category-card {
+  $self: &;
+  position: relative;
+  width: 100%;
+  max-width: rem(420);
+  margin: 0 auto;
+  overflow: hidden;
+
+  &__cover {
+    width: 100%;
+    padding-top: 50%;
+  }
+
+  &__img {
+    @include object-fit();
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: rem(10);
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba($warm-white, 0.6);
+    transition: all 0.2s ease-in-out;
+    padding: rem(10);
+  }
+
+  &:hover {
+    #{ $self }__img {
+      transform: scale(1);
+    }
+
+    #{ $self }__content {
+      background-color: rgba($warm-white, 1);
+    }
+  }
+}

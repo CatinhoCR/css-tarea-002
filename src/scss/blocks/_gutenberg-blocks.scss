@@ -1,0 +1,7 @@
+// Use to extend theme classes for Gut Extended Blocks
+.is-style {
+  // Headings
+  &-main-title {
+    @extend .heading, .heading--lg;
+  }
+}

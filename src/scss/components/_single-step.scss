@@ -1,0 +1,22 @@
+.step {
+  &__cover {
+    margin-bottom: rem(30);
+
+    img {
+      width: 65%;
+      margin: 0 auto;
+    }
+  }
+
+  &__body {
+    padding: 0 rem(10);
+  }
+
+  &__title {
+    margin-bottom: rem(10);
+  }
+
+  &__text {
+    color: $dark-grey;
+  }
+}

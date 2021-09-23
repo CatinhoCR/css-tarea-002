@@ -1,0 +1,46 @@
+// Page Section Blocks
+.section-block {
+  padding: rem(40) 0;
+  position: relative;
+
+  &__text {
+    width: 100%;
+    max-width: $max-width-block-text;
+
+    &--center {
+      margin: 0 auto;
+    }
+  }
+
+  &--img {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), transparent;
+  }
+
+  &__bg {
+    @include absolute(0, 0, 100%, 100%);
+
+    &-img {
+      @include object-fit;
+    }
+  }
+
+  // &__title {
+  //   @include break-min($md) {
+  //     padding: rem(20) 15%;
+  //   }
+
+  //   @include break-min($lg) {
+  //     padding: rem(20) 20%;
+  //     margin-bottom: rem(20);
+  //   }
+
+  //   @include break-min($xl) {
+  //     padding: rem(20) 20%;
+  //     margin-bottom: rem(40);
+  //   }
+
+  //   &.dark {
+  //     color: $black;
+  //   }
+  // }
+}

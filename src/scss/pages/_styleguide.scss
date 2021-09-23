@@ -1,0 +1,100 @@
+.styleguide {
+  // padding-top: rem(70);
+  // padding-bottom: rem(40);
+
+  // &__section {
+  //   position: relative;
+  //   width: 100%;
+  //   padding: rem(40) rem(20);
+  //   margin: 0 auto;
+  //   display: flex;
+  //   flex-direction: column;
+  //   border-bottom: 1px dashed $grey;
+
+  //   &:last-child {
+  //     border-bottom: 0;
+  //   }
+  // }
+
+  &__section {
+    background-color: $white;
+    padding: rem(40) 0 0;
+    margin-bottom: rem(40);
+
+    &:nth-child(2n) {
+      background-color: $warm-white;
+    }
+
+    &:nth-child(3n) {
+      background-color: $dark-grey;
+
+      // .styleguide__section {
+      //   &-heading,
+      //   &-text {
+      //     color: $white;
+      //   }
+      // }
+    }
+
+    &-heading,
+    &-text {
+      margin-bottom: rem(10);
+    }
+
+    &-text {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-button {
+      margin-right: rem(20);
+    }
+
+    &-list {
+      margin: rem(20) 0 rem(30);
+      display: flex;
+      flex-direction: column;
+
+      @include break-min($sm) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      &-item {
+        margin: 0 rem(10) rem(20);
+      }
+    }
+
+    &-code {
+      display: block;
+      font-family: $font-misc;
+      font-weight: 700;
+      font-size: rem(18);
+      letter-spacing: rem(1);
+      background-color: $dark-grey;
+      padding: rem(10) rem(20);
+      color: lighten($green, 10%);
+      border-radius: rem(2);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    }
+  }
+
+  &__inner {
+    @include container;
+    border-bottom: 2px dashed $green;
+    padding-bottom: rem(40);
+    padding-top: rem(40);
+
+    &:first-child {
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

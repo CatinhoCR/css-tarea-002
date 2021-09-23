@@ -1,0 +1,119 @@
+.hero-banner {
+  $self: &;
+  position: relative;
+  height: 100vh;
+
+  &__img {
+    @include object-fit();
+    // max-height: 100%;
+    z-index: 0;
+  }
+
+  &--fixed {
+    clip-path: inset(0);
+
+    #{ $self }__img {
+      position: fixed;
+    }
+  }
+
+  &--short {
+    max-height: rem(522);
+  }
+
+  &--mid {
+    max-height: rem(622);
+  }
+
+  &__overlay {
+    @include object-fit();
+    z-index: 0;
+
+    &--white {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6) 20%, rgba(255, 255, 255, 0.9));
+    }
+
+    &--black {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    }
+
+    // @todo make dynamic
+    &--blue {
+      $list: rgba($dark-blue, 0.9) 33%, rgba($dark-blue, 0.6) 66%, rgba($dark-blue, 0.3) 90%, transparent;
+      @include bg-gradient('to top', $list);
+    }
+  }
+
+  &__inner {
+    @extend .container;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding: rem(120) 0 rem(80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-banner__buttons {
+      align-items: center;
+      justify-content: center;
+    }
+
+    &.bottom {
+      align-items: flex-end;
+
+      .hero-banner__buttons {
+        align-items: flex-end;
+      }
+    }
+
+    &.top {
+      align-items: flex-start;
+
+      .hero-banner__buttons {
+        align-items: flex-start;
+      }
+    }
+
+    &.right {
+      justify-content: flex-end;
+
+      .hero-banner__buttons {
+        justify-content: flex-end;
+      }
+    }
+
+    &.left {
+      justify-content: flex-start;
+
+      .hero-banner__buttons {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__info {
+    max-width: $max-width-block-text;
+  }
+
+  &__title {
+    margin-bottom: rem(20);
+  }
+
+  &__text {
+    margin-bottom: rem(30);
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+
+    .button {
+      margin-right: rem(20);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

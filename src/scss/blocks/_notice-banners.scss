@@ -1,0 +1,101 @@
+.notice-banner {
+  width: 1px;
+  height: 1px;
+  max-height: 0;
+  // border: 0;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  transition: max-height 0.2s ease;
+  z-index: z('notice-bars');
+
+  &--pill {
+    border-radius: rem(24);
+    max-width: rem(800);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: rem(10) rem(20);
+  }
+
+  &.active {
+    width: 100%;
+    background-color: $mid-blue;
+  }
+
+  &--top {
+    top: -1;
+    height: $top-banner-height;
+
+    &.active {
+      top: 0;
+      max-height: $top-banner-height;
+
+      + .banner-shown {
+        top: $top-banner-height;
+      }
+    }
+  }
+
+  &--bottom {
+    bottom: -1;
+    height: $bottom-banner-height;
+
+    &.active {
+      bottom: 0;
+      max-height: $bottom-banner-height;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: z('overlay');
+  }
+
+  &__inner {
+    @include container;
+    position: relative;
+    height: 100%;
+  }
+
+  &__notice {
+    @include flex-children(center, center);
+    height: 100%;
+    margin-right: rem(36);
+  }
+
+  &__closer {
+    position: absolute;
+    right: $padding-side-mobile;
+    top: 50%;
+    transform: translateY(-50%);
+    // max-height: rem(16);
+    font-size: rem(22);
+    z-index: z('notice-bars');
+    cursor: pointer;
+    color: $white;
+  }
+
+  &__button {
+    color: $white;
+  }
+}
+
+@include break-min($md) {
+  .notice-banner {
+    &__closer {
+      right: $padding-side-tablet;
+    }
+  }
+}
+
+@include break-min($lg) {
+  .notice-banner {
+    &__closer {
+      right: rem(30);
+    }
+  }
+}

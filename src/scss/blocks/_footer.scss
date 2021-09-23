@@ -1,0 +1,52 @@
+.site-footer {
+  &__top {
+    background-color: $warm-black;
+    padding: rem(40) 0;
+
+    .heading {
+      @extend .text-white;
+      margin-bottom: rem(10);
+    }
+
+    a {
+      @extend .text-white, .link, .link--md;
+
+      &:hover {
+        @extend .text-green;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: rem(20) 0;
+    background-color: $dark-blue;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: rem(200) !important;
+    margin-bottom: rem(30);
+  }
+
+  &__list {
+    text-align: right;
+  }
+
+  &__item {
+    line-height: 0;
+    display: inline-block;
+    margin-right: rem(16);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@include break-min($md) {
+  .site-footer {
+    &__logo {
+      margin-bottom: rem(20);
+    }
+  }
+}

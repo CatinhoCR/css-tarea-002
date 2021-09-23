@@ -1,0 +1,40 @@
+.pagination {
+  margin: rem(30) 0;
+  text-align: center;
+
+  &__next,
+  &__prev {
+    color: $green;
+    max-width: rem(30);
+    width: rem(30);
+    transform: translateY(10px);
+  }
+
+  &__nav {
+    .page-numbers {
+      font-weight: 700;
+      padding: rem(6) rem(14);
+      color: #fff;
+      background-color: $green;
+      margin-right: rem(10);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background-color: $light-green;
+      }
+
+      &.current {
+        background-color: $dark-green;
+      }
+
+      &.next,
+      &.prev {
+        background-color: transparent;
+        color: $green;
+      }
+    }
+  }
+}

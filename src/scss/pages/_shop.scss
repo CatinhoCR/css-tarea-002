@@ -1,0 +1,109 @@
+.shop {
+  &__header {
+    padding: rem(40) 0 0;
+    margin-bottom: rem(20);
+  }
+
+  &__row {
+    @include flex-children(top, space-between);
+  }
+
+  &__cols {
+    > .col {
+      margin-bottom: rem(20);
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @extend .heading--gradient;
+    width: 100%;
+    margin-bottom: rem(20);
+    font-family: $font-label;
+    font-weight: $bold-weight;
+  }
+
+  &__breadcrumbs {
+    max-width: rem(350);
+  }
+
+  &__sorting {
+    width: auto;
+    max-width: rem(300);
+  }
+
+  &__menu {
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    margin: 0 rem(20) rem(10);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: rem(16);
+    line-height: 1;
+    font-family: $font-secondary;
+    color: $brand-blue;
+    border-bottom: 1px solid $brand-blue;
+  }
+}
+
+@include break-min($sm) {
+  .shop {
+    &__cols {
+      > .col {
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@include break-min($md) {
+  .shop {
+    &__cols {
+      > .col {
+        max-width: (100% / 3);
+        margin-bottom: rem(30);
+      }
+    }
+  }
+}
+
+@include break-min($lg) {
+  .shop {
+    &__cols {
+      > .col {
+        max-width: (100% / 4);
+        margin-bottom: rem(40);
+      }
+    }
+  }
+}
+
+@include break-min($xl) {
+  .shop {
+    &__cols {
+      @for $i from 1 through 6 {
+        &-#{$i} {
+          $col-size: (12 / #{$i});
+
+          > .col {
+            margin-bottom: rem(50);
+            max-width: (100% / #{$i});
+          }
+        }
+      }
+    }
+
+    &__link {
+      font-size: rem(18);
+    }
+  }
+}

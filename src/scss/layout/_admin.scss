@@ -1,0 +1,29 @@
+.admin-bar {
+  .header {
+    &--scrolled {
+      &.header--sticky {
+        top: 0;
+      }
+    }
+
+    &--sticky {
+      top: $adminbar-height-mobile;
+    }
+  }
+}
+
+@include break-min($lg) {
+  .admin-bar {
+    .header {
+      &--scrolled {
+        &.header--sticky {
+          top: $adminbar-height-desktop;
+        }
+      }
+
+      &--sticky {
+        top: $adminbar-height-desktop;
+      }
+    }
+  }
+}

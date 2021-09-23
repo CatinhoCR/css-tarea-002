@@ -1,0 +1,25 @@
+.colored-wave {
+  width: 100%;
+  max-height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  &--flip-horizontal {
+    transform: scaleX(-1);
+  }
+
+  &--flip-vertical {
+    transform: scaleY(-1);
+  }
+
+  &--flip-horizontal-and-vertical {
+    transform: scaleX(-1) scaleY(-1);
+  }
+
+  .wave-svg {
+    display: block;
+    width: 100%;
+    max-height: 150px;
+  }
+}

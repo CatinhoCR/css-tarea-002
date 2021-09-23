@@ -1,0 +1,29 @@
+.gallery {
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__thumbs {
+    .swiper-slide {
+      opacity: 0.5;
+      width: 50%;
+    }
+
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+}
+
+@include break-min($sm) {
+  .gallery {
+    &__thumbs {
+      .swiper-slide {
+        width: calc(100% / 3);
+      }
+    }
+  }
+}

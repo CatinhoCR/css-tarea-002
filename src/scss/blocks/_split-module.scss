@@ -1,0 +1,102 @@
+.split-block {
+  padding-top: rem(60);
+  padding-bottom: rem(60);
+  background-color: $warm-white;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  &__image {
+    width: 60%;
+    margin: 0 auto;
+    text-align: right;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-top: rem(20);
+    text-align: left;
+  }
+
+  &__signature,
+  &__description {
+    margin-top: rem(10);
+  }
+
+  .button {
+    margin-top: rem(20);
+  }
+}
+
+@include break-min($md) {
+  .split-block {
+    &--reverse {
+      .split-block__inner {
+        flex-flow: row-reverse;
+      }
+
+      .split-block__content {
+        padding-right: rem(116);
+        padding-left: 0;
+      }
+    }
+
+    &__inner {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__image {
+      width: 35%;
+      margin: rem(30) 0 0 0;
+    }
+
+    &__content {
+      margin-top: 0;
+      width: 65%;
+      padding-left: rem(116);
+      padding-right: 0;
+    }
+
+    &__description {
+      margin-top: rem(15);
+    }
+  }
+}
+
+@include break-min($xl) {
+  .split-block {
+    &__image {
+      margin: 0;
+      width: 40%;
+    }
+
+    &__content {
+      width: 60%;
+    }
+
+    &__title {
+      margin-top: rem(30);
+    }
+
+    &__description,
+    &__signature {
+      margin-top: rem(20);
+    }
+
+    .button {
+      margin-top: rem(30);
+    }
+  }
+}

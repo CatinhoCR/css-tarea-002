@@ -1,0 +1,21 @@
+.products-list {
+  &__col {
+    margin-bottom: rem(60);
+  }
+}
+
+@include break-min($lg) {
+  .products-list {
+    &__col {
+      margin-bottom: rem(40);
+    }
+  }
+}
+
+@include break-min($lg) {
+  .products-list {
+    &__col {
+      margin-bottom: rem(30);
+    }
+  }
+}

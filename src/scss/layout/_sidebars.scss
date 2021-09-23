@@ -1,0 +1,62 @@
+.sidebar {
+  .widget {
+    margin-bottom: rem(20);
+    padding: 0 rem(5);
+
+    &_search {
+      padding: 0;
+    }
+
+    &__title {
+      margin-bottom: rem(10);
+    }
+
+    li {
+      margin-bottom: rem(1);
+
+      &::before {
+        content: '-';
+        display: inline-block;
+      }
+    }
+
+    a {
+      font-family: $font-secondary;
+      font-weight: 500;
+      color: $mid-blue;
+      font-size: rem(15);
+      transition: 0.2s all ease;
+
+      /* stylelint-disable-next-line */
+      &:hover {
+        color: $light-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include break-min($md) {
+  .sidebar {
+    .widget {
+      padding: 0 rem(10);
+      margin-bottom: rem(40);
+
+      &_search {
+        padding: 0;
+      }
+
+      &__title {
+        margin-bottom: rem(15);
+      }
+
+      li {
+        margin-bottom: rem(4);
+      }
+
+      a {
+        font-size: rem(17);
+      }
+    }
+  }
+}

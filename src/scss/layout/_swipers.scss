@@ -1,0 +1,86 @@
+.swiper {
+  &-pagination {
+    position: relative;
+    margin: 0 rem(20);
+
+    &-bullet {
+      margin-right: rem(10);
+      border: 1px solid $black;
+      background-color: transparent;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &-active {
+        background-color: $dark-blue;
+        border: none;
+      }
+    }
+  }
+
+  &-controls {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: rem(2);
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // .ui-icon {
+    //   max-width: rem(16);
+    //   max-height: rem(16);
+    // }
+  }
+
+  // &-slide {
+  //   height: auto;
+  //   display: inline-block;
+  // }
+}
+
+@include break-min($xl) {
+  .swiper {
+    &-wrapper {
+      margin-bottom: rem(30);
+    }
+
+    &-controls {
+      padding-bottom: rem(4);
+
+      .next,
+      .previous {
+        width: 48px;
+        height: 48px;
+      }
+
+      // .ui-icon {
+      //   max-width: rem(22);
+      //   max-height: rem(22);
+      // }
+    }
+  }
+}
+
+// @include break-min($xxl) {
+//   .swiper {
+//     &-wrapper {
+//       display: grid;
+//       // @todo responsiveness &.destroy
+//       grid-template-columns: repeat(auto-fit, minmax(19%, 1fr));
+//       gap: 20px 20px;
+//     }
+
+//     &-controls {
+//       display: none;
+
+//       &__wrapper {
+//         display: none;
+//       }
+//     }
+//   }
+// }
